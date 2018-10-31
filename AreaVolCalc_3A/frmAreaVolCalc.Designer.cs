@@ -44,6 +44,10 @@
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.rdAreaOfCircle = new System.Windows.Forms.RadioButton();
             this.btnExit = new System.Windows.Forms.Button();
+            this.txtDivBy = new System.Windows.Forms.TextBox();
+            this.label1 = new System.Windows.Forms.Label();
+            this.txtDivTotal = new System.Windows.Forms.TextBox();
+            this.label2 = new System.Windows.Forms.Label();
             this.groupBox1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -136,10 +140,10 @@
             // 
             // txtTotal
             // 
-            this.txtTotal.Location = new System.Drawing.Point(302, 181);
+            this.txtTotal.Location = new System.Drawing.Point(321, 181);
             this.txtTotal.Name = "txtTotal";
             this.txtTotal.ReadOnly = true;
-            this.txtTotal.Size = new System.Drawing.Size(100, 20);
+            this.txtTotal.Size = new System.Drawing.Size(88, 20);
             this.txtTotal.TabIndex = 9;
             this.txtTotal.TabStop = false;
             // 
@@ -156,10 +160,10 @@
             // 
             this.btnCalculate.BackColor = System.Drawing.Color.RoyalBlue;
             this.btnCalculate.ForeColor = System.Drawing.Color.White;
-            this.btnCalculate.Location = new System.Drawing.Point(77, 275);
+            this.btnCalculate.Location = new System.Drawing.Point(77, 263);
             this.btnCalculate.Name = "btnCalculate";
             this.btnCalculate.Size = new System.Drawing.Size(163, 35);
-            this.btnCalculate.TabIndex = 6;
+            this.btnCalculate.TabIndex = 7;
             this.btnCalculate.Text = "&Calculate";
             this.btnCalculate.UseVisualStyleBackColor = false;
             this.btnCalculate.Click += new System.EventHandler(this.btnCalculate_Click);
@@ -168,10 +172,10 @@
             // 
             this.btnClearInputs.BackColor = System.Drawing.Color.RoyalBlue;
             this.btnClearInputs.ForeColor = System.Drawing.Color.White;
-            this.btnClearInputs.Location = new System.Drawing.Point(246, 275);
+            this.btnClearInputs.Location = new System.Drawing.Point(246, 263);
             this.btnClearInputs.Name = "btnClearInputs";
             this.btnClearInputs.Size = new System.Drawing.Size(163, 35);
-            this.btnClearInputs.TabIndex = 7;
+            this.btnClearInputs.TabIndex = 8;
             this.btnClearInputs.Text = "C&lear";
             this.btnClearInputs.UseVisualStyleBackColor = false;
             this.btnClearInputs.Click += new System.EventHandler(this.btnClearInputs_Click);
@@ -179,12 +183,14 @@
             // groupBox1
             // 
             this.groupBox1.BackColor = System.Drawing.SystemColors.ButtonFace;
+            this.groupBox1.Controls.Add(this.label1);
             this.groupBox1.Controls.Add(this.rdAreaOfCircle);
+            this.groupBox1.Controls.Add(this.txtDivBy);
             this.groupBox1.Controls.Add(this.rdVolume);
             this.groupBox1.Controls.Add(this.rdArea);
             this.groupBox1.Location = new System.Drawing.Point(77, 94);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(325, 70);
+            this.groupBox1.Size = new System.Drawing.Size(332, 70);
             this.groupBox1.TabIndex = 11;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Select Calculation Type";
@@ -207,13 +213,47 @@
             this.btnExit.DialogResult = System.Windows.Forms.DialogResult.Cancel;
             this.btnExit.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnExit.ForeColor = System.Drawing.Color.White;
-            this.btnExit.Location = new System.Drawing.Point(162, 316);
+            this.btnExit.Location = new System.Drawing.Point(162, 304);
             this.btnExit.Name = "btnExit";
             this.btnExit.Size = new System.Drawing.Size(163, 36);
-            this.btnExit.TabIndex = 8;
+            this.btnExit.TabIndex = 9;
             this.btnExit.Text = "E&xit";
             this.btnExit.UseVisualStyleBackColor = false;
             this.btnExit.Click += new System.EventHandler(this.btnExit_Click);
+            // 
+            // txtDivBy
+            // 
+            this.txtDivBy.Location = new System.Drawing.Point(255, 46);
+            this.txtDivBy.Name = "txtDivBy";
+            this.txtDivBy.Size = new System.Drawing.Size(46, 20);
+            this.txtDivBy.TabIndex = 6;
+            this.txtDivBy.Text = "1";
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(185, 49);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(64, 13);
+            this.label1.TabIndex = 13;
+            this.label1.Text = "Div Len. by:";
+            // 
+            // txtDivTotal
+            // 
+            this.txtDivTotal.Location = new System.Drawing.Point(321, 207);
+            this.txtDivTotal.Name = "txtDivTotal";
+            this.txtDivTotal.ReadOnly = true;
+            this.txtDivTotal.Size = new System.Drawing.Size(88, 20);
+            this.txtDivTotal.TabIndex = 12;
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Location = new System.Drawing.Point(262, 210);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(56, 13);
+            this.label2.TabIndex = 13;
+            this.label2.Text = "Div. Total:";
             // 
             // frmAreaVolCalc
             // 
@@ -221,7 +261,9 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.CancelButton = this.btnExit;
-            this.ClientSize = new System.Drawing.Size(486, 409);
+            this.ClientSize = new System.Drawing.Size(486, 379);
+            this.Controls.Add(this.label2);
+            this.Controls.Add(this.txtDivTotal);
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.btnClearInputs);
             this.Controls.Add(this.btnExit);
@@ -262,5 +304,9 @@
         private System.Windows.Forms.GroupBox groupBox1;
         private System.Windows.Forms.RadioButton rdAreaOfCircle;
         private System.Windows.Forms.Button btnExit;
+        private System.Windows.Forms.TextBox txtDivBy;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.TextBox txtDivTotal;
+        private System.Windows.Forms.Label label2;
     }
 }
